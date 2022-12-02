@@ -22,7 +22,7 @@ public sealed class FeatureCollection : IFeatureCollection
     {
         if (!_features.Add(feature ?? throw new ArgumentNullException(nameof(feature))))
         {
-            throw new ArgumentException($"Web applcation feature of type '{feature.GetType()}' with name '{feature.Name}' has already been added.");
+            throw new ArgumentException($"Feature of type '{feature.GetType()}' with same name '{feature.Name}' has already been added.");
         }
         return this;
     }
