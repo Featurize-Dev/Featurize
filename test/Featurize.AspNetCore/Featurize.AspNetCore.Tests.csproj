@@ -8,6 +8,9 @@
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
   <ItemGroup>
     <PackageReference Include="FluentAssertions" Version="6.8.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.3.2" />
@@ -18,7 +21,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\DotNet.Features\Featurize.csproj" />
+    <ProjectReference Include="..\..\src\Featurize.AspNetCore\Featurize.AspNetCore.csproj" />
+    <ProjectReference Include="..\..\src\Featurize\Featurize.csproj" />
   </ItemGroup>
 
 </Project>

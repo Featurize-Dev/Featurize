@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DotNet.Features\Featurize.csproj" />
+    <ProjectReference Include="..\Featurize\Featurize.csproj" />
   </ItemGroup>
 
 </Project>
