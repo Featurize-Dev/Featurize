@@ -7,11 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Featurize.AspNetCore" Version="1.0.*-*" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="7.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\src\DotNet.Features.AspNetCore\Featurize.AspNetCore.csproj" />
     <ProjectReference Include="..\Client\BlazorFeatures.Client.csproj" />
     <ProjectReference Include="..\Shared\BlazorFeatures.Shared.csproj" />
   </ItemGroup>

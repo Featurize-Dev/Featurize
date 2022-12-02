@@ -5,13 +5,10 @@ namespace BlazorFeatures.Client.Features.Weather;
 
 public partial class FetchData
 {
-    [Inject]
-    public HttpClient Http { get; set; }
-
-    private WeatherForecast[]? forecasts;
+    private WeatherForecast[]? _forecasts;
 
     protected override async Task OnInitializedAsync()
     {
-        forecasts = await Http.GetForecasts();
+        _forecasts = await Http.GetForecasts();
     }
 }
