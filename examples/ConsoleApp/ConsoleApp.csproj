@@ -8,11 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Featurize.ConsoleApp" Version="1.0.*-*" />
     <PackageReference Include="Microsoft.Extensions.Http" Version="7.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\src\DotNet.Features.Console\Featurize.ConsoleApp.csproj" />
   </ItemGroup>
 
 </Project>
