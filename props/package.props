@@ -5,10 +5,10 @@
 
   <PropertyGroup>
     <PackageIcon>logo_128.png</PackageIcon>
-    <PackageProjectUrl>https://github.com/pmdevers/Featurize</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/Featurize-Dev/Featurize</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://github.com/pmdevers/Featurize</RepositoryUrl>
+    <RepositoryUrl>https://github.com/Featurize-Dev/Featurize</RepositoryUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <DebugType>portable</DebugType>
     <Nullable>enable</Nullable>
