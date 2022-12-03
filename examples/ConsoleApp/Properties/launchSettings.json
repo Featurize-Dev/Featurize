@@ -15,6 +15,10 @@
     "UseHttp": {
       "commandName": "Project",
       "commandLineArgs": "UseHttp"
+    },
+    "WithOptions": {
+      "commandName": "Project",
+      "commandLineArgs": "WithOptions --Filename=test.json --Output=true"
     }
   }
 }

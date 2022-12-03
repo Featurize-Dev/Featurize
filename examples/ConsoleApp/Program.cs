@@ -1,12 +1,17 @@
-﻿using Featurize;
+﻿using ConsoleApp.Features.WithOptions;
+using Featurize;
 using Featurize.ConsoleApp;
 
 var builder = ConsoleApplication.CreateBuilder(args);
 
 builder.Features.DiscoverFeatures();
 
+builder.AddWithOptions();
+
 var app = builder.Build();
 
 app.Run();
 
-Console.ReadLine();
+#if DEBUG
+    Console.ReadLine();
+#endif
