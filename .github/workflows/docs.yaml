@@ -22,7 +22,7 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
     - name: Setup dotnet
       uses: actions/setup-dotnet@v3
@@ -30,7 +30,7 @@ jobs:
         dotnet-version: '7.x.x'
 
     - name: Setup DocFX
-      uses: crazy-max/ghaction-chocolatey@v1
+      uses: crazy-max/ghaction-chocolatey@v2
       with:
         args: install docfx
 
