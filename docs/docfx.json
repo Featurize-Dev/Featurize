@@ -49,19 +49,26 @@
         ]
       }
     ],
-    "globalMetadata": {
-      "_appTitle": "Featurize Documentation",
-      "_appFooter": "All rights reserved <br /><a href='http://featurize-dev.io/'>Featurize-dev.io</a>",
-      "_gitContribute": {
-        "repo": "https://github.com/Featurize-Dev/Featurize",
-        "branch": "main"
-      },
-      "_appLogoPath": "images/Featurize-wide.png"
-    },
-    "dest": "../docs",
+    "dest": "_site",
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
-    "template": ["default", "templates/singulinkfx" ],
+    "template": [
+      "default",
+      "templates/singulinkfx"
+    ],
+    "globalMetadata": {
+      "_appTitle": "Featurize Dev",
+      "_appName": "Featurize",
+      "_appFaviconPath": "images/favicon.png",
+      "_appLogoPath": "images/Featurize-logo.png",
+      "_appFooter": "<strong>DotNet + Featurize = ♥</strong>",
+      "_copyrightFooter": "© Featurize. All rights reserved.",
+      "_enableSearch": true,
+      "_disableSideFilter": false,
+      "_enableNewTab": true,
+      "_disableContribution": false,
+      "_disableBreadcrumb": false
+    },
     "postProcessors": [],
     "markdownEngineName": "markdig",
     "noLangKeyword": false,
