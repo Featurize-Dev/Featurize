@@ -4,6 +4,9 @@ using Microsoft.Extensions.DependencyInjection;
 using System.Diagnostics.Contracts;
 
 namespace Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+/// <summary>
+/// Extensions for <see cref="WebAssemblyHostBuilder"/>
+/// </summary>
 public static class WebAssemblyHostBuilderExtensions
 {
     /// <summary>Gets the <see cref="IFeatureCollection"/>.</summary>
@@ -21,6 +24,11 @@ public static class WebAssemblyHostBuilderExtensions
         return features;
     }
 
+    /// <summary>
+    /// Builds a instance <see cref="WebAssemblyHost"/> with the added features.
+    /// </summary>
+    /// <param name="builder">The <see cref="WebAssemblyHostBuilder"/>.</param>
+    /// <returns>a <see cref="WebAssemblyHost"/>.</returns>
     [Pure]
     public static WebAssemblyHost BuildWithFeatures(this WebAssemblyHostBuilder builder)
     {
@@ -37,9 +45,21 @@ public static class WebAssemblyHostBuilderExtensions
         return application;
     }
 
+    /// <summary>
+    /// Gets all features implementing <see cref="IConfigureFeature"/>.
+    /// </summary>
+    /// <param name="features">The <see cref="IFeatureCollection"/>.</param>
+    /// <returns>List of <see cref="IConfigureFeature"/>.</returns>
+    [Pure]
     public static IEnumerable<IConfigureFeature> GetConfigureFeatures(this IFeatureCollection features)
         => features.OfType<IConfigureFeature>();
 
+    /// <summary>
+    /// Gets all features implementing <see cref="IUseFeature"/>.
+    /// </summary>
+    /// <param name="features">The <see cref="IFeatureCollection"/>.</param>
+    /// <returns>List of <see cref="IUseFeature"/>.</returns>
+    [Pure]
     public static IEnumerable<IUseFeature> GetUseFeatures(this IFeatureCollection features)
         => features.OfType<IUseFeature>();
 }

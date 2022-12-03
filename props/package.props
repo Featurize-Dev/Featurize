@@ -10,7 +10,8 @@
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/Featurize-Dev/Featurize</RepositoryUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <DebugType>portable</DebugType>
+	<GenerateDocumentationFile>True</GenerateDocumentationFile>
+	<DebugType>portable</DebugType>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 

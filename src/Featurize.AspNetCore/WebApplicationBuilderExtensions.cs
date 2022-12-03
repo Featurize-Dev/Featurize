@@ -4,6 +4,10 @@ using Microsoft.Extensions.DependencyInjection;
 using System.Diagnostics.Contracts;
 
 namespace Microsoft.AspNetCore.Builder;
+
+/// <summary>
+/// Extension methods for <see cref="WebApplicationBuilder"/>.
+/// </summary>
 public static class WebApplicationBuilderExtensions
 {
     /// <summary>Gets the <see cref="IFeatureCollection"/>.</summary>
@@ -21,6 +25,11 @@ public static class WebApplicationBuilderExtensions
         return features;
     }
 
+    /// <summary>
+    /// Builds the <see cref="WebApplication"/> with the registerd features.
+    /// </summary>
+    /// <param name="builder">The <see cref="WebApplicationBuilder"/>.</param>
+    /// <returns>Instance of <see cref="WebApplication"/>.</returns>
     [Pure]
     public static WebApplication BuildWithFeatures(this WebApplicationBuilder builder)
     {
@@ -37,9 +46,19 @@ public static class WebApplicationBuilderExtensions
         return application;
     }
 
+    /// <summary>
+    /// Gets all features implementing <see cref="IConfigureFeature"/>.
+    /// </summary>
+    /// <param name="features">The <see cref="IFeatureCollection"/>.</param>
+    /// <returns>List of <see cref="IConfigureFeature"/>.</returns>
     public static IEnumerable<IConfigureFeature> GetConfigureFeatures(this IFeatureCollection features)
         => features.OfType<IConfigureFeature>();
 
+    /// <summary>
+    /// Gets all features implementing <see cref="IUseFeature"/>.
+    /// </summary>
+    /// <param name="features">The <see cref="IFeatureCollection"/>.</param>
+    /// <returns>List of <see cref="IUseFeature"/>.</returns>
     public static IEnumerable<IUseFeature> GetUseFeatures(this IFeatureCollection features)
         => features.OfType<IUseFeature>();
 }
