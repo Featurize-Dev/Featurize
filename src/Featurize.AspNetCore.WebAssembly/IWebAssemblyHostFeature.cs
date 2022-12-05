@@ -5,24 +5,11 @@ namespace Featurize.AspNetCore.WebAssembly;
 /// <summary>
 /// Describes a web assembly feature.
 /// </summary>
-/// <seealso cref="IConfigureFeature" />
+/// <seealso cref="IServiceCollectionFeature" />
 /// <seealso cref="IUseFeature" />
-public interface IWebAssemblyHostFeature : IConfigureFeature, IUseFeature
+public interface IWebAssemblyHostFeature : IServiceCollectionFeature, IUseFeature
 {
 
-}
-
-/// <summary>
-/// Describes a feature that can manipulate the <see cref="WebAssemblyHostBuilder"/>.
-/// </summary>
-/// <seealso cref="IFeature" />
-public interface IConfigureFeature : IFeature
-{
-    /// <summary>
-    /// Configures the specified builder.
-    /// </summary>
-    /// <param name="builder">The builder.</param>
-    void Configure(WebAssemblyHostBuilder builder);
 }
 
 /// <summary>

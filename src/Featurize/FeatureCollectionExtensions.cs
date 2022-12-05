@@ -18,6 +18,15 @@ public static class FeatureCollectionExtensions
         => features.FirstOrDefault(x => x.Name.Equals(name, StringComparison.InvariantCultureIgnoreCase));
 
     /// <summary>
+    /// Gets features implementing <see cref="IServiceCollectionFeature"/>.
+    /// </summary>
+    /// <param name="features">The <see cref="IFeatureCollection"/>.</param>
+    /// <returns></returns>
+    [Pure]
+    public static IEnumerable<IServiceCollectionFeature> GetServiceCollectionFeatures(this IFeatureCollection features)
+        => features.OfType<IServiceCollectionFeature>().AsEnumerable();
+
+    /// <summary>
     /// Automaticaly scans the calling assembly for types that implement <see cref="IFeature"/> with a parameter less constructor and adds them to the collection.
     /// </summary>
     /// <param name="builder">The <see cref="IFeatureCollection"/> to add the features to.</param>

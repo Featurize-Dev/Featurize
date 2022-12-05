@@ -72,9 +72,9 @@ public class ConsoleApplicationBuilder
     /// <returns></returns>
     public ConsoleApplication Build()
     {
-        foreach (var feature in _features.GetConfigurableFeatures())
+        foreach (var feature in _features.GetServiceCollectionFeatures())
         {
-            feature.Configure(this);
+            feature.Configure(this.Services);
         }
 
         var application = _hostApplicationBuilder.Build();

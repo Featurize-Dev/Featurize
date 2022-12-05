@@ -5,24 +5,11 @@ namespace Featurize.AspNetCore;
 /// <summary>
 /// Describes a web application feature.
 /// </summary>
-/// <seealso cref="Featurize.AspNetCore.IConfigureFeature" />
+/// <seealso cref="Featurize.IServiceCollectionFeature" />
 /// <seealso cref="Featurize.AspNetCore.IUseFeature" />
-public interface IWebApplicationFeature : IConfigureFeature, IUseFeature
+public interface IWebApplicationFeature : IServiceCollectionFeature, IUseFeature
 {
 
-}
-
-/// <summary>
-/// Describes a feature to register services.
-/// </summary>
-/// <seealso cref="Featurize.IFeature" />
-public interface IConfigureFeature : IFeature
-{
-    /// <summary>
-    /// Allow the feature to register services
-    /// </summary>
-    /// <param name="builder">The builder.</param>
-    void Configure(WebApplicationBuilder builder);
 }
 
 /// <summary>
