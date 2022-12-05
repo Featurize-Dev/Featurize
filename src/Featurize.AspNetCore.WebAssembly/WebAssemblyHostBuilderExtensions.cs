@@ -33,9 +33,9 @@ public static class WebAssemblyHostBuilderExtensions
     public static WebAssemblyHost BuildWithFeatures(this WebAssemblyHostBuilder builder)
     {
         var features = builder.Features();
-        foreach (var feature in features.GetConfigureFeatures())
+        foreach (var feature in features.GetServiceCollectionFeatures())
         {
-            feature.Configure(builder);
+            feature.Configure(builder.Services);
         }
         var application = builder.Build();
         foreach (var feature in features.GetUseFeatures())
@@ -44,15 +44,6 @@ public static class WebAssemblyHostBuilderExtensions
         }
         return application;
     }
-
-    /// <summary>
-    /// Gets all features implementing <see cref="IConfigureFeature"/>.
-    /// </summary>
-    /// <param name="features">The <see cref="IFeatureCollection"/>.</param>
-    /// <returns>List of <see cref="IConfigureFeature"/>.</returns>
-    [Pure]
-    public static IEnumerable<IConfigureFeature> GetConfigureFeatures(this IFeatureCollection features)
-        => features.OfType<IConfigureFeature>();
 
     /// <summary>
     /// Gets all features implementing <see cref="IUseFeature"/>.

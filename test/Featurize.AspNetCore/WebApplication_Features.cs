@@ -46,7 +46,7 @@ public class Double
 
 class EmptyFeature : IWebApplicationFeature
 {
-    public void Configure(WebApplicationBuilder builder) { }
+    public void Configure(IServiceCollection services) { }
 
     public void Use(WebApplication app) { }
 }

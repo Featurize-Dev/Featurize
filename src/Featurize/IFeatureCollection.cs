@@ -1,4 +1,6 @@
-﻿namespace Featurize;
+﻿using Microsoft.Extensions.DependencyInjection;
+
+namespace Featurize;
 /// <summary>
 /// Describes a collection of <see cref="IFeature"/>.
 /// </summary>
@@ -38,4 +40,17 @@ public interface IFeature
     /// The name of the feature (defaults to type name)
     /// </summary>
     string Name => GetType().Name;
+}
+
+/// <summary>
+/// Describes a feature for registering services.
+/// </summary>
+/// <seealso cref="Featurize.IFeature" />
+public interface IServiceCollectionFeature : IFeature
+{
+    /// <summary>
+    /// Configures the specified services.
+    /// </summary>
+    /// <param name="services">The services.</param>
+    void Configure(IServiceCollection services);
 }
