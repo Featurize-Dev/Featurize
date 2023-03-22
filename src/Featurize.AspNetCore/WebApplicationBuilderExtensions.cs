@@ -5,10 +5,7 @@ using System.Diagnostics.Contracts;
 
 namespace Microsoft.AspNetCore.Builder;
 
-/// <summary>
-/// Extension methods for <see cref="WebApplicationBuilder"/>.
-/// </summary>
-public static class WebApplicationBuilderExtensions
+/// <summary>/// Extension methods for <see cref="WebApplicationBuilder"/>./// </summary>public static class WebApplicationBuilderExtensions
 {
     /// <summary>Gets the <see cref="IFeatureCollection"/>.</summary>
     [Pure]
@@ -25,15 +22,11 @@ public static class WebApplicationBuilderExtensions
         return features;
     }
 
-    /// <summary>
-    /// Builds the <see cref="WebApplication"/> with the registerd features.
-    /// </summary>
-    /// <param name="builder">The <see cref="WebApplicationBuilder"/>.</param>
-    /// <returns>Instance of <see cref="WebApplication"/>.</returns>
-    [Pure]
+    /// <summary>    /// Builds the <see cref="WebApplication"/> with the registerd features.    /// </summary>    /// <param name="builder">The <see cref="WebApplicationBuilder"/>.</param>    /// <returns>Instance of <see cref="WebApplication"/>.</returns>    [Pure]
     public static WebApplication BuildWithFeatures(this WebApplicationBuilder builder)
     {
         var features = builder.Features();
+
         foreach (var feature in features.GetServiceCollectionFeatures())
         {
             feature.Configure(builder.Services);

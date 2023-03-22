@@ -1,5 +1,6 @@
 ﻿namespace Featurize;
 
+
 /// <summary>
 /// Defines a configurable feature.
 /// </summary>
