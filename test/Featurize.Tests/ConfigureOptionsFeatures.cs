@@ -1,140 +1,88 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Data;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Featurize.Tests;
-public class ConfigureOptionsFeatures
+﻿namespace Featurize.Tests;
+public partial class Get
 {
     [Test]
     public void Should_configure_options()
     {
         var features = new FeatureCollection();
 
-        features.AddWithOptions<FeatureWithOptions, FeatureOptions>();
+        features.AddWithOptions<FeatureWithConfigurableOptions, FeatureOptions>( x=>
+        {
+            x.Items.Add("First");
+        });
         features.Add(new ConfigureOptionsFeature());
         features.Add(new ConfigureOptionsFeature1());
 
-        var test = ConfigureInfo.GetConfigurableFeatures(features);
+        var feature = features.Get<FeatureWithConfigurableOptions>();
 
-        var results = ConfigureInfo.IsConfigurable(features);
+        feature.Should().NotBeNull();
+        feature!.Options.Items.Should().HaveCount(3);
 
-        foreach (var item in results)
-        {
-            item.Configure(features);
-        }
-                        
     }
-
-    public abstract class ConfigureInfo
-    {
-        public static Type[] GetConfigInterfaces(IFeature feature)
-        {
-            return feature.GetType().GetInterfaces().Where(x => x.IsGenericType && x.GetGenericTypeDefinition() == typeof(IConfigureFeature<,>)).ToArray();
-        } 
-            
-
-        public static ConfigureInfo[] IsConfigurable(FeatureCollection features)
-        {
-            return features.Where(x => GetConfigInterfaces(x).Any())
-                .SelectMany(x => {
-                    var interfaces = GetConfigInterfaces(x);
-                    var list = new List<ConfigureInfo>();
-                    foreach (var i in interfaces)
-                    {
-                         list.Add((ConfigureInfo)Activator.CreateInstance(typeof(ConfigureInfo<,>).MakeGenericType(i.GetGenericArguments()), x));
-                    }
-                    return list.ToArray();
-                })
-                .ToArray();
-        }
-
-        public static bool GetConfigurableInterfaces(IFeature feature)
-        {
-            var interfaces = feature.GetType().GetInterfaces()
-                        .Where(x => x.IsGenericType && x.GetGenericTypeDefinition() == typeof(IConfigureFeature<,>));
-            return interfaces.Any();
-        }
-
-        public static IFeature[] GetConfigurableFeatures(FeatureCollection features)
-        {
-            return features
-                .Where(x => {
-                    var interfaces = x.GetType().GetInterfaces()
-                        .Where(x => x.IsGenericType && x.GetGenericTypeDefinition() == typeof(IConfigureFeature<,>));
-                    return interfaces.Any();
-                }).ToArray();
-        }
-        public abstract void Configure(FeatureCollection features);
-    }
-    public class ConfigureInfo<TFeature, TOption> : ConfigureInfo
-        where TFeature : IFeatureWithConfigurableOptions<TOption>, IFeature
-        where TOption : class
-    {
-        private readonly IConfigureFeature<TFeature, TOption> _configFeature;
-
-        public ConfigureInfo(IConfigureFeature<TFeature, TOption> configFeature)
-        {
-            _configFeature = configFeature;
-        }
-       
-        public override void Configure(FeatureCollection features)
-        {
-            var feature = features.OfType<IFeatureWithConfigurableOptions<TOption>>().FirstOrDefault();
-            _configFeature.Configure(feature.Options);
-        }
-    }
-    
 }
 
-public interface IConfigureFeature<TFeature, TOptions> : IFeature
-     where TFeature : IFeatureWithConfigurableOptions<TOptions>
+public partial class GetEnumerator
 {
-    void Configure(TOptions options);
+
+    [Test]
+    public void Should_Configure_Options()
+    {
+        var features = new FeatureCollection();
+        var feature = FeatureWithConfigurableOptions.Create(new FeatureOptions());
+        var config = new ConfigureOptionsFeature();
+
+        features.Add(feature);
+        features.Add(config);
+        //features.Add(new ConfigureOptionsFeature1());
+
+        _ = features.GetEnumerator();
+        _ = features.GetEnumerator();
+
+        config.IsCalled.Should().BeTrue();
+        feature.Options.Items.Should().HaveCount(1);
+    }
 }
 
-public class ConfigureOptionsFeature : IConfigureFeature<FeatureWithOptions, FeatureOptions>
+
+
+public class ConfigureOptionsFeature : IConfigureFeature<FeatureWithConfigurableOptions, FeatureOptions>
 {
+    public bool IsCalled = false;
     public void Configure(FeatureOptions options)
     {
-       options.Name= "test";
+        IsCalled= true;
+        options.Items.Add(GetType().Name);
     }
 }
 
-public class ConfigureOptionsFeature1 : IConfigureFeature<FeatureWithOptions, FeatureOptions>
+public class ConfigureOptionsFeature1 : IConfigureFeature<FeatureWithConfigurableOptions, FeatureOptions>
 {
+    public bool IsCalled = false;
     public void Configure(FeatureOptions options)
     {
-        options.Name = "test3";
+        IsCalled = true;
+        options.Items.Add(GetType().Name);
     }
 }
-
-
-public interface IFeatureWithConfigurableOptions<TOptions>
-{
-    public TOptions Options { get; }
-}
-
 
 public class FeatureOptions
 {
-    public string Name { get; set; }
+    public HashSet<string> Items { get; set; } = new();
 }
 
-public class FeatureWithOptions : 
-    IFeatureWithOptions<FeatureWithOptions, FeatureOptions>,
-    IFeatureWithConfigurableOptions<FeatureOptions>
+public class FeatureWithConfigurableOptions :
+    IFeatureWithConfigurableOptions<FeatureOptions>,
+    IFeatureWithOptions<FeatureWithConfigurableOptions, FeatureOptions>
+    
 {
     public FeatureOptions Options { get; private set; }
 
-    public static FeatureWithOptions Create(FeatureOptions config)
+    public static FeatureWithConfigurableOptions Create(FeatureOptions config)
     {
-        return new FeatureWithOptions() {
+        return new FeatureWithConfigurableOptions() {
             Options = config
         };
     }
 }
+
+

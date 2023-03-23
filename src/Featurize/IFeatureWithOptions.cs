@@ -1,5 +1,16 @@
 ﻿namespace Featurize;
 
+/// <summary>
+/// Marks a feature that its options can be configured by other features
+/// </summary>
+/// <typeparam name="TOptions"></typeparam>
+public interface IFeatureWithConfigurableOptions<TOptions>
+{
+    /// <summary>
+    /// The configurable options of the feature.
+    /// </summary>
+    public TOptions Options { get; }
+}
 
 /// <summary>
 /// Defines a configurable feature.

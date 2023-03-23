@@ -2,7 +2,7 @@
 
 namespace Featurize.Tests;
 
-public class Get
+public partial class Get
 {
     [Test]
     public void Should_Return_Feature()
