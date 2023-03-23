@@ -16,18 +16,18 @@ public interface IFeatureWithConfigurableOptions<TOptions>
 /// Defines a configurable feature.
 /// </summary>
 /// <typeparam name="TSelf">The type of the feature self.</typeparam>
-/// <typeparam name="TConfig">The type of the configuration.</typeparam>
+/// <typeparam name="TOptions">The type of the configuration.</typeparam>
 /// <seealso cref="Featurize.IFeature" />
-public interface IFeatureWithOptions<TSelf, TConfig> : IFeature
+public interface IFeatureWithOptions<TSelf, TOptions> : IFeature
     where TSelf : IFeature
-    where TConfig : class
+    where TOptions : class
 {
     /// <summary>
     /// Creates the specified feature with configuration.
     /// </summary>
-    /// <param name="config">The configuration.</param>
+    /// <param name="options">The configuration.</param>
     /// <returns>Returns a instance of the feature.</returns>
-    static abstract TSelf Create(TConfig config);
+    static abstract TSelf Create(TOptions options);
 }
 
 /// <summary>

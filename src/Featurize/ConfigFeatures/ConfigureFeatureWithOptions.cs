@@ -13,7 +13,7 @@ internal static class ConfigureFeatureWithOptions
         return feature.GetType().GetInterfaces().Where(x => x.IsGenericType && x.GetGenericTypeDefinition() == typeof(IConfigureFeature<,>)).ToArray();
     }
 
-    internal static IFeatureCollection Configure(IFeatureCollection features)
+    internal static IFeatureCollection Configure(this IFeatureCollection features)
     {
         var results = features.Where(x => GetConfigInterfaces(x).Any())
             .SelectMany(x => {

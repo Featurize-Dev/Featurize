@@ -71,11 +71,12 @@ public sealed class FeatureCollection : IFeatureCollection
     /// An enumerator that can be used to iterate through the collection.
     /// </returns>
     [Pure]
-    public IEnumerator<IFeature> GetEnumerator()  {
+    public IEnumerator<IFeature> GetEnumerator()  
+    {
         if (!_isConfigured)
         {
             _isConfigured = true;
-            ConfigureFeatureWithOptions.Configure(this);
+            this.Configure();
         }
 
         return _features.GetEnumerator();
