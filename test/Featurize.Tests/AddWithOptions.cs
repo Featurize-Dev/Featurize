@@ -25,9 +25,12 @@ public class FeatureWithOptions : IFeatureWithOptions<FeatureWithOptions, Featur
 {
     public string Name { get; set; }
 
+    public FeatureOptions Options { get;}
+
     private FeatureWithOptions(FeatureOptions options)
     {
-        Name= options.Name;
+        Name = options.Name;
+        Options = options;
     }
 
     public static FeatureWithOptions Create(FeatureOptions config)

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Featurize.ConfigFeatures;
+using System.Collections;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Diagnostics.Contracts;
@@ -11,6 +12,8 @@ namespace Featurize;
 [DebuggerDisplay("Count = {Count}")]
 public sealed class FeatureCollection : IFeatureCollection
 {
+    private bool _isConfigured = false;
+
     [DebuggerBrowsable(DebuggerBrowsableState.Never)]
     private static readonly EqualityComparer _comparer = new();
 
@@ -59,7 +62,7 @@ public sealed class FeatureCollection : IFeatureCollection
     /// </returns>
     [Pure]
     public TFeature? Get<TFeature>() where TFeature : IFeature
-        => _features.OfType<TFeature>().FirstOrDefault();
+        => this.OfType<TFeature>().FirstOrDefault();
 
     /// <summary>
     /// Returns an enumerator that iterates through the collection.
@@ -68,7 +71,16 @@ public sealed class FeatureCollection : IFeatureCollection
     /// An enumerator that can be used to iterate through the collection.
     /// </returns>
     [Pure]
-    public IEnumerator<IFeature> GetEnumerator() => _features.GetEnumerator();
+    public IEnumerator<IFeature> GetEnumerator()  
+    {
+        if (!_isConfigured)
+        {
+            _isConfigured = true;
+            this.Configure();
+        }
+
+        return _features.GetEnumerator();
+    }
 
     /// <summary>
     /// Returns an enumerator that iterates through a collection.
