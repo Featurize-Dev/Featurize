@@ -1,4 +1,5 @@
 ﻿using Featurize.ConfigFeatures;
+using Featurize.SortFeatures;
 using System.Collections;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
@@ -79,7 +80,7 @@ public sealed class FeatureCollection : IFeatureCollection
             this.Configure();
         }
 
-        return _features.GetEnumerator();
+        return _features.Sort((x) => DependencyResolver.GetDependencies(x, _features), true).GetEnumerator();
     }
 
     /// <summary>
