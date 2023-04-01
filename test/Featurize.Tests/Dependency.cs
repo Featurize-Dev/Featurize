@@ -1,7 +1,7 @@
 ﻿using Featurize.SortFeatures;
 
 namespace Featurize.Tests;
-internal class DependencyTests
+internal class Dependency
 {
     [Test]
     public void should_be_sorted()
@@ -74,6 +74,8 @@ internal class FeatureA : IFeature { }
 internal class FeatureB : IFeature, IDependsOn<FeatureA> { }
 internal class FeatureC : IFeature, IDependsOn<FeatureB> { }
 internal class FeatureD : IFeature, IDependsOn<FeatureD> { }
+
+internal class FeatureD1 : IFeature, IDependsOn<FeatureA>, IDependsOn<FeatureB> { }
 
 internal class FeatureE : IFeature, IDependsOn<FeatureF> { }
 internal class FeatureF : IFeature, IDependsOn<FeatureE> { }

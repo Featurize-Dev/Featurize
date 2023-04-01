@@ -25,6 +25,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "props", "props", "{95243A1D
 		props\package.props = props\package.props
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Featurize.Hosting", "src\Featurize.Hosting\Featurize.Hosting.csproj", "{829DEF49-78AF-43C1-ACFA-4CEC455A2027}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,10 @@ Global
 		{B1F758A4-4ABC-45BE-A5CC-86C6BBE3C4F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1F758A4-4ABC-45BE-A5CC-86C6BBE3C4F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1F758A4-4ABC-45BE-A5CC-86C6BBE3C4F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{829DEF49-78AF-43C1-ACFA-4CEC455A2027}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{829DEF49-78AF-43C1-ACFA-4CEC455A2027}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{829DEF49-78AF-43C1-ACFA-4CEC455A2027}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{829DEF49-78AF-43C1-ACFA-4CEC455A2027}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -66,6 +72,7 @@ Global
 		{709B98CB-EB36-4165-94A7-07CD49E9A4C1} = {1259D6F3-A64B-4D21-8DAC-0430CE57F718}
 		{17029B69-5E1D-42EF-9985-B33812E74702} = {FF1F7A90-83DC-43AB-9DA3-24E0BADDF737}
 		{B1F758A4-4ABC-45BE-A5CC-86C6BBE3C4F7} = {1259D6F3-A64B-4D21-8DAC-0430CE57F718}
+		{829DEF49-78AF-43C1-ACFA-4CEC455A2027} = {FF1F7A90-83DC-43AB-9DA3-24E0BADDF737}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0BE8D887-99DE-4599-A14A-422AEE037345}

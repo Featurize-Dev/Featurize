@@ -1,5 +1,6 @@
 ﻿using Featurize;
 using Featurize.AspNetCore;
+using Featurize.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using System.Diagnostics.Contracts;
 
@@ -26,6 +27,11 @@ namespace Microsoft.AspNetCore.Builder;
     public static WebApplication BuildWithFeatures(this WebApplicationBuilder builder)
     {
         var features = builder.Features();
+
+        foreach(var feature in features.GetHostFeatures())
+        {
+            feature.Configure(builder.Host);
+        }
 
         foreach (var feature in features.GetServiceCollectionFeatures())
         {
