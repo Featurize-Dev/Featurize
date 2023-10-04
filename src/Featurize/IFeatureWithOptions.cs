@@ -4,7 +4,7 @@
 /// Marks a feature that its options can be configured by other features
 /// </summary>
 /// <typeparam name="TOptions"></typeparam>
-public interface IFeatureWithConfigurableOptions<TOptions>
+public interface IFeatureWithConfigurableOptions<TOptions> : IConfigurableFeature
 {
     /// <summary>
     /// The configurable options of the feature.
