@@ -86,7 +86,8 @@ public class FeatureWithConfigurableOptions :
 
     public void Configure(IFeatureCollection features)
     {
-        
+        features.Configure(Options);
+
     }
 }
 
