@@ -45,7 +45,7 @@ public partial class GetEnumerator
 
 
 
-public class ConfigureOptionsFeature : IConfigureFeature<FeatureWithConfigurableOptions, FeatureOptions>
+public class ConfigureOptionsFeature : IConfigureOptions<FeatureOptions>
 {
     public bool IsCalled = false;
     public void Configure(FeatureOptions options)
@@ -55,7 +55,7 @@ public class ConfigureOptionsFeature : IConfigureFeature<FeatureWithConfigurable
     }
 }
 
-public class ConfigureOptionsFeature1 : IConfigureFeature<FeatureWithConfigurableOptions, FeatureOptions>
+public class ConfigureOptionsFeature1 : IConfigureOptions<FeatureOptions>
 {
     public bool IsCalled = false;
     public void Configure(FeatureOptions options)
@@ -82,6 +82,11 @@ public class FeatureWithConfigurableOptions :
         return new FeatureWithConfigurableOptions() {
             Options = config
         };
+    }
+
+    public void Configure(IFeatureCollection features)
+    {
+        
     }
 }
 

@@ -61,6 +61,33 @@ public static class FeatureCollectionExtensions
         return features;
     }
 
+    /// <summary>
+    /// Gets all features implementing <see cref="IConfigureOptions{TOptions}"/>.
+    /// </summary>
+    /// <typeparam name="TOptions">The Options of the feature.</typeparam>
+    /// <param name="features">The Feature Collection.</param>
+    /// <returns>All features implementing <see cref="IConfigureOptions{TOptions}"/>.</returns>
+    public static IEnumerable<IConfigureOptions<TOptions>> GetFeatureConfiguring<TOptions>(this IFeatureCollection features)
+    {
+        return features.OfType<IConfigureOptions<TOptions>>();
+    }
+
+    /// <summary>
+    /// Run All Configurations 
+    /// </summary>
+    /// <typeparam name="TOptions">Options to Configure.</typeparam>
+    /// <param name="features">The feature collection.</param>
+    /// <param name="options">The options to configure.</param>
+    public static void Configure<TOptions>(this IFeatureCollection features, TOptions options)
+    {
+        var result = features.GetFeatureConfiguring<TOptions>();
+        foreach (var item in result)
+        {
+            item.Configure(options);
+        }
+        
+    }
+
     private static IFeature Construct(ConstructorInfo ctor)
         => (IFeature)ctor.Invoke(Array.Empty<object>());
 
@@ -69,6 +96,5 @@ public static class FeatureCollectionExtensions
 
     private static bool IsFeatureType(Type type) =>
         typeof(IFeature).IsAssignableFrom(type) && !type.IsAbstract;
-
     
 }
