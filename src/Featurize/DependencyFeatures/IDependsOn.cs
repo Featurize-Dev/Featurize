@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
-using System.Linq;
-using System.Reflection.Metadata.Ecma335;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Featurize.SortFeatures;
 
-namespace Featurize.SortFeatures;
+/// <summary>
+/// Marks a feature that it depends on <typeparamref name="TFeature"/>.
+/// </summary>
+/// <typeparam name="TFeature">The feature that it depends on.</typeparam>
 public interface IDependsOn<TFeature>
     where TFeature : IFeature
 {

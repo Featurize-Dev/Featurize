@@ -27,11 +27,18 @@ namespace Microsoft.AspNetCore.Builder;
     {
         var features = builder.Features();
 
+        foreach (var feature in features.GetHostFeatures())
+        {
+            feature.Configure(builder.Host);
+        }
+
         foreach (var feature in features.GetServiceCollectionFeatures())
         {
             feature.Configure(builder.Services);
         }
+
         var application = builder.Build();
+
         foreach (var feature in features.GetUseFeatures())
         {
             feature.Use(application);
@@ -44,6 +51,16 @@ namespace Microsoft.AspNetCore.Builder;
     /// </summary>
     /// <param name="features">The <see cref="IFeatureCollection"/>.</param>
     /// <returns>List of <see cref="IUseFeature"/>.</returns>
+    [Pure]
     public static IEnumerable<IUseFeature> GetUseFeatures(this IFeatureCollection features)
         => features.OfType<IUseFeature>();
+
+    /// <summary>
+    /// Gets all features implmenting <see cref="IHostFeature"/>.
+    /// </summary>
+    /// <param name="features">The <see cref="IFeatureCollection"/>.</param>
+    /// <returns>List of <see cref="IHostFeature"/>.</returns>
+    [Pure]
+    public static IEnumerable<IHostFeature> GetHostFeatures(this IFeatureCollection features)
+        => features.OfType<IHostFeature>();
 }

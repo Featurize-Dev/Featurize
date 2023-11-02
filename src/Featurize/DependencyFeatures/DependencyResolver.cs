@@ -21,7 +21,7 @@ internal static class DependencyResolver
         foreach (var dep in dependencies)
         {
             var depType = dep.GetGenericArguments()[0];
-            var d = source.FirstOrDefault(x=> x.GetType() == depType);
+            var d = source.FirstOrDefault(x => x?.GetType() == depType);
 
             if (d is null)
                 throw new InvalidOperationException($"Dependenvy '{dep.Name}' required for '{item.GetType().Name}' has not been registered.");
