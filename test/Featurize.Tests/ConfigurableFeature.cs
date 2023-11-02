@@ -17,7 +17,7 @@ internal class ConfigurableFeature_tests
         features.Add(configureFeature);
         features.Add(optionsFeature);
 
-        var c = features.Get<ConfigurableFeature>();
+        var c = features.Get<ConfigurableFeature>()!;
         c.ConfigCalled.Should().BeTrue();
     }
 }
