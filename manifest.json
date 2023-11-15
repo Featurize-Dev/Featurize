@@ -1,0 +1,562 @@
+{
+  "homepages": [],
+  "source_base_path": "D:/a/Featurize/Featurize/docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      },
+      "is_incremental": false
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Featurize.AspNetCore.IHostFeature.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Featurize.AspNetCore.IHostFeature.html",
+          "hash": "LqlAjqz0mW+75E8F4zVIA8R5h1kN9TKABJKJBNuBFTg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Featurize.AspNetCore.IUseFeature.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Featurize.AspNetCore.IUseFeature.html",
+          "hash": "Fd/X3R/0q20bmGOthyIaROOYtT5asCeIwFGRzHl0GKw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Featurize.AspNetCore.IWebApplicationFeature.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Featurize.AspNetCore.IWebApplicationFeature.html",
+          "hash": "4QqKqEVEnjy1MU8RN2thelG0QzgKWIcfWkW1tDPnvnc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Featurize.AspNetCore.WebAssembly.IUseFeature.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Featurize.AspNetCore.WebAssembly.IUseFeature.html",
+          "hash": "yCQdPq/xQp4VAbiq4ZMdYdhsu2f7vL8CmWwMo18azPk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Featurize.AspNetCore.WebAssembly.IWebAssemblyHostFeature.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Featurize.AspNetCore.WebAssembly.IWebAssemblyHostFeature.html",
+          "hash": "52vJyfZRRvpyvrhP0ZooSnkSg60DNwpgS/Y9018+rhg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Featurize.AspNetCore.WebAssembly.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Featurize.AspNetCore.WebAssembly.html",
+          "hash": "dhRYFoyNrru7j5gN1PnrvtJ8uZ1I+fylwetyjc/0rUg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Featurize.AspNetCore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Featurize.AspNetCore.html",
+          "hash": "CCdQBBdRqQqCrcZOL6RAEI9uU4uV1Ikf6rDFLxyiero="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Featurize.ConsoleApp.ConsoleApplication.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Featurize.ConsoleApp.ConsoleApplication.html",
+          "hash": "IgyMqF84WvYVL++FQVPxXp0OB8C397uP2vTc05BXzLs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Featurize.ConsoleApp.ConsoleApplicationBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Featurize.ConsoleApp.ConsoleApplicationBuilder.html",
+          "hash": "nSE85FBNUUVP++ZfbEK12tX10nx0iqWIv6zMFA3Mx3o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Featurize.ConsoleApp.ConsoleApplicationOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Featurize.ConsoleApp.ConsoleApplicationOptions.html",
+          "hash": "Um/xvlM6QFSa+CErGkQWk9UumGnq7VXBmGv7EIUVEO8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Featurize.ConsoleApp.Help.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Featurize.ConsoleApp.Help.html",
+          "hash": "OAoumwWDwqze83I6bItVyn/uHI4jO2jaC/wTh5epGqc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Featurize.ConsoleApp.IConsoleApplicationFeature.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Featurize.ConsoleApp.IConsoleApplicationFeature.html",
+          "hash": "iGAQDy3wuFuXfObm//o3fbuYh6E4cmI1+iYHW67vtcA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Featurize.ConsoleApp.IFeatureCollectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Featurize.ConsoleApp.IFeatureCollectionExtensions.html",
+          "hash": "ipxvcEf+JsmbcMdaYUWukcd0u2pqxIVUP5sedoMQ57I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Featurize.ConsoleApp.IRunableFeature.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Featurize.ConsoleApp.IRunableFeature.html",
+          "hash": "4OK3xR46TPa3SNVVmX3aOixDZgV+SbvMIN68SVeFoe4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Featurize.ConsoleApp.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Featurize.ConsoleApp.html",
+          "hash": "bdjCcqgxd1CAyzIWgMKBAp6pjzvJZgDxjUtle8Pb4oQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Featurize.FeatureCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Featurize.FeatureCollection.html",
+          "hash": "Nj7lmzixhDl2+ID7O1R6wf5IXzGtZAvWW57HLec7gm8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Featurize.FeatureCollectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Featurize.FeatureCollectionExtensions.html",
+          "hash": "VNcIl5zINWRFHVruEMaCAHe73At6yr9kb8Ugl8P4HgY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Featurize.FeatureCollectionExtentions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Featurize.FeatureCollectionExtentions.html",
+          "hash": "D1m2mC/stVfw6NDz6jyhZq9S1FIjYOU8f9X3AYbDeAI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Featurize.IConfigurableFeature.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Featurize.IConfigurableFeature.html",
+          "hash": "7mOCv4BG1w4v73CoX8r0P03Ts9gR3LM83hwReEfQGK4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Featurize.IConfigureOptions-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Featurize.IConfigureOptions-1.html",
+          "hash": "tm631kjLgRUS9TftRY+ZIypl3x/dd+8Y0yjVBmeyufc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Featurize.IFeature.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Featurize.IFeature.html",
+          "hash": "EjcE6R7n+p9ExYePENxM9G6LvnzIsaYCUf/fYe5Wl84="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Featurize.IFeatureCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Featurize.IFeatureCollection.html",
+          "hash": "48V//pWRsOD1DoLmoCyNG3jPkmOx9QXsfgBvzGGC2cg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Featurize.IFeatureWithConfigurableOptions-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Featurize.IFeatureWithConfigurableOptions-1.html",
+          "hash": "A3lLyzRBQZDSGbqYCUugYixfLhbthOB9US4ddZBB294="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Featurize.IFeatureWithOptions-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Featurize.IFeatureWithOptions-2.html",
+          "hash": "BaKS3G9Nhqh0ao3RH/71zMX9bgWKUBt17SroyvCn/7g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Featurize.IServiceCollectionFeature.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Featurize.IServiceCollectionFeature.html",
+          "hash": "zBVqcL9BD5lhRMiRWSDZ4iome9N/FfUEI0brf4TWVt4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Featurize.SortFeatures.IDependsOn-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Featurize.SortFeatures.IDependsOn-1.html",
+          "hash": "AJwnwz0gZGQFSRHUR3UnqhFxqIqu0iXZRHaE7+5Agd8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Featurize.SortFeatures.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Featurize.SortFeatures.html",
+          "hash": "pvWyn0INf2kfCdiL9A52QpWxZR0GVWxZTkBW0048bvc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Featurize.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Featurize.html",
+          "hash": "BZDN7QkDsrPM/0umr262zFH0qM9gDfeOFIwiIdlBQz4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions.html",
+          "hash": "J2vIcJL67aFuAtkaqiGSUmwDffbQssdeODnehhkEb4k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Microsoft.AspNetCore.Builder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Microsoft.AspNetCore.Builder.html",
+          "hash": "s01ZangsgzOW617sA8b67qNpS/zjWrz2042qFcBwXDM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyHostBuilderExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyHostBuilderExtensions.html",
+          "hash": "/o5xde2U9r1cwgh+NtBg4vIl5JUNp0d+CXWXkAEub50="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Microsoft.AspNetCore.Components.WebAssembly.Hosting.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Microsoft.AspNetCore.Components.WebAssembly.Hosting.html",
+          "hash": "/p7BvFkBlUhhPK6DzLJtLm9V0Eo89/BXt19INrg2FuE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "XpuqnQyPJLLlWh1Eyo7jbuyVwZFlrYxUWoXVKTnrD/k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "7cy8b+eOWb1GYakrMIWQj/dBOjdmzustREhlzxlTAx8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/getting-started.html",
+          "hash": "dfjuQCkZIKYfiCxInQYu6+XrgDKr0KBJ/UswtqnvZWM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "Ioj2rVCetP9kZgacoBufzIwixfLgTYlUplp7RGlcj7o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "dzydZS3+dfRqpysluOBZHZa0R/xV51IQK4tSyMGoe+0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/Featurize-logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/Featurize-logo.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/favicon.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/favicon.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "ltzYi2N8E2NfJmi0OxHkXeKfeJ4/8aDqTzFiC33HfpY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "TKu+fXAUkRxRPowWZpMWtyl7t7cXH9j+lDeFzqd/zUM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 4,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 32,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: should not trace intermediate info.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
