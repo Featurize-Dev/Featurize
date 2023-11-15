@@ -75,7 +75,7 @@ public class FeatureWithConfigurableOptions :
     IFeatureWithOptions<FeatureWithConfigurableOptions, FeatureOptions>
     
 {
-    public FeatureOptions Options { get; private set; }
+    public FeatureOptions Options { get; private set; } = new();
 
     public static FeatureWithConfigurableOptions Create(FeatureOptions config)
     {
